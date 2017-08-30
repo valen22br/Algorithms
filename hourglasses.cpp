@@ -32,7 +32,7 @@ int main(){
        }
     }
         
-    int max = 0;
+    int max = -55;
     for(int i = 0; i < 4; i++)
     {
         int sum = 0;
