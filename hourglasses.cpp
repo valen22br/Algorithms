@@ -40,35 +40,38 @@ int main(){
         for(int j = 0; j < 4; j++)
         {
             
-            cout << arr[i][j] << arr[i][j+1] << arr[i][j+2] ;
-            cout << " ";
+            //cout << arr[i][j] << arr[i][j+1] << arr[i][j+2] ;
+            //cout << " ";
             sum += arr[i][j];
             sum += arr[i][j+1];
             sum += arr[i][j+2];
-        }
-        cout << endl;        
-        for(int j = 0; j < 4; j++)
-        {
-            sum += arr[i+1][j+1];
-            cout << arr[i+1][j+1];
-            cout << " ";
-        }
-        cout << endl;
-        for(int j = 0; j < 4; j++)
-        {
             
-            cout << arr[i+2][j] << arr[i+2][j+1] << arr[i+2][j+2] ;
-            cout << " ";
+            //cout << endl;
+            
+            sum += arr[i+1][j+1];
+            
+            //cout << " " << arr[i+1][j+1];
+            //cout << " ";
+            //cout << endl;
+            
+            
+            //cout << arr[i+2][j] << arr[i+2][j+1] << arr[i+2][j+2] ;
+            //cout << " ";
             sum += arr[i+2][j];
             sum += arr[i+2][j+1];
             sum += arr[i+2][j+2];
+            
+            //cout <<"sum: " << sum << endl;
+            //cout << endl << endl;
+            
+            if(sum > max)
+            {
+                max = sum;
+            }
+            sum = 0;
+            
         }
-        cout << endl;
-        cout << sum << endl;
-        if(sum > max)
-        {
-            max = sum;
-        }
+       //cout << endl;        
     }
     cout << max ;
     return 0;
